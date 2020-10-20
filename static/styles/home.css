@@ -1,0 +1,81 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body,html
+{
+  height: 100%;
+  font-family: 'Roboto', sans-serif ;
+}
+body  {
+background-image:  url("/static/image/money-2.jpg");
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+
+}
+.heading{
+position: absolute;
+top:30%;
+text-align: center;
+
+
+}
+
+.viewc
+{
+position: fixed;
+top:2%;
+text-align: center;
+margin: 1px,1px;
+right: 10%;
+color: white;
+text-decoration: none;
+width:10%;
+border-radius: 10px;
+padding: 0.4%;
+}
+
+.viewc:hover
+{
+background-color: skyblue;
+
+
+
+
+}
+
+.header
+{
+position:fixed;
+background-color: #000000;
+top: 0;
+left: 0;
+height: 8%;
+width:100%;
+
+
+
+
+
+}
+
+.sparks
+{position: absolute;
+color: white;
+padding: 1% 1% 1% 2%;
+top:20%;
+  left: 0;
+  font-style: italic;
+}
+
+.quotes
+{
+position: absolute;
+top:40%;
+left: 7%;
+
+}
+
+

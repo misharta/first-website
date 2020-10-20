@@ -1,0 +1,203 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>View customers</title>
+     <link rel="icon" href="{% static 'image/favicon.jpg' %}">
+<style media="screen">
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body{
+  background-color: skyblue;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif ;
+}
+
+table
+{
+ width: 800px;
+ margin:auto;
+ text-align: center;
+
+
+
+}
+
+table,tr,td
+{
+
+  font-size: 18px;
+  font-style: Arial;
+background-color: #0098779
+ text-align: left;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  padding: 7px;
+}
+
+thead
+{
+  background-color: #009879;
+ color: black;
+ text-align: left;
+ font-weight: bold;
+
+}
+
+.start{
+   text-decoration: none;
+}
+
+
+.button {
+  background-color: #4CAF50;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+  height: 30px;
+  margin: 50px;
+  position: absolute;
+top:80%;
+
+left:45%
+}
+
+.button:hover {
+  background-color: #cc0e74; 
+  color: white;
+}
+
+header {
+  top:0;
+  background-color: #000000;
+
+  overflow: hidden;
+
+  margin: 0 auto;
+  height: 80px;
+  padding-bottom: 20px;
+ margin-bottom:10px;
+
+
+}
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  color: white;
+}
+ a.active {
+
+
+  position: absolute;
+  right: 4%;
+  top:2%;
+
+  color: white;
+  
+
+}
+
+.header a.active:hover {
+  background-color: dodgerblue;
+  color: white;
+
+}
+
+.main_header
+{
+  color: white;
+margin-left: 40%;
+
+}
+
+
+.viewc
+{
+
+  color: white;
+  display: inl;
+    position: absolute;
+ 
+  top:1%;
+
+
+}
+
+
+    .sparks
+{position: absolute;
+color: white;
+  padding: 1% 1% 1% 2%;
+top:2%;
+    left: 0;
+}
+
+
+</style>
+
+  </head>
+<body bgcolor =" #11999E">
+   <div class="header">
+      <header>
+        <h3><span class="sparks">THE SPARK FOUNDATION</span></h3>
+            <h1><span class="main_header"style="float:left">USER LIST</span></h1>
+
+              <a class="active" href="\"><span style="float: right">HOME</span> </a>
+
+
+               </header>
+
+<div class="form-group">
+ {% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
+</div>
+
+
+    </div>
+
+    {% csrf_token %}
+
+ <table>
+ <thead>
+<tr>
+
+  <th>ACCOUNT NUMBER</th>
+  <th colspan = "1.9px">EMAIL ID</th>
+  <th>NAME</th>
+  <th>CURRENT BALANCE</th>
+  </tr>
+  </thead>
+{% for customer in mycusts %}
+<tr>
+
+<td>{{ customer.accountnumber }}</td>
+<td>{{ customer.emailid }}</td>
+<td><a href="personal_account/{{customer.name}}" > {{ customer.name }}</a></td>
+<td>$ {{ customer.CurrentBalance }}</td>
+</tr>
+
+{% endfor %}
+ </table>
+
+
+
+
+<button type="button" name="button" class="button">
+<a href="transactionpage" class="start">START TRANSACTION</a></button>
+
+
+
+  </body>
+</html>

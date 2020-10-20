@@ -1,0 +1,42 @@
+
+  {% load static %}
+  <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>personal account</title>
+     <link rel="icon" href="{% static 'image/favicon.jpg' %}">
+       <link rel="stylesheet" href="{% static 'styles/personal_account.css' %}">
+  </head>
+  <body>
+
+
+    <div class="header">
+          <header class="sparks">
+            THE SPARK FOUNDATION
+    
+        <span  > <a class="home"href="\">HOME</a></span>
+
+          </header>
+        </div>
+<div class="box">
+
+  <div class="welcomeclass">
+      <h1>WELCOME Mr. {{ parcusts.name}} </h1>
+  </div>
+
+  <div class="details">
+   
+  
+     <h3>Bank Account Number : {{parcusts.accountnumber}}</h3>
+    <h3>Account Holder's Name : {{parcusts.name}}</h3>
+    <h3>Email ID  : {{parcusts.emailid}}</h3>
+    <h3>Current Balance  :${{parcusts.CurrentBalance}}</h3>
+</div>
+<div class="transfer">
+   <a class="viewc" href= "\accounts\transactionpage">TRANSFER CREDIT</a>
+</div>
+
+  </body>
+</html>
+

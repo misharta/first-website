@@ -1,0 +1,144 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  background: url(https://i.pinimg.com/originals/60/16/2d/60162db21117a3fbb69be3c237869e9c.jpg) no-repeat top center;
+  background-size: cover;
+ font-family: 'Roboto', sans-serif;
+}
+.header
+{
+font-style: italic;
+position:fixed;
+background-color: #000000;
+top: 0;
+left: 0;
+height: 8%;
+width:100%;
+
+
+
+
+
+}
+
+
+.sparks
+{position: fixed;
+color: white;
+left:2.5%;
+top: 2%;
+
+
+}
+
+.back{
+  position: fixed;
+  color: white;
+  right: 10%;
+  top:2%;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.box{
+  position: absolute;
+  top:30%;
+  left:37%;
+
+background-color: lightgreen;
+
+opacity: 0.8;
+display: flex;
+box-shadow: 0 0 10px rgb(0,0,0,0.3);
+
+  width:25%;
+  display: block;
+height: auto;
+
+  grid-template-columns: repeat(2, 1fr);
+justify-content: center;
+align-items: center;
+text-align: center;
+border-radius: 10px;
+
+}
+h2
+{
+  position: relative;padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+h2 :after
+{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width:50px;
+  border-radius: 2px;
+  background-color: #2ecc71;
+}
+
+
+.select
+{
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 2px solid rgba(0,0,0,0);
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition:0.3s;
+}
+
+.sender{
+  text-decoration:none;
+
+}
+.button {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 10px 16px;
+  margin: 10px 0;
+
+  color: #ffffff;
+  background: #000000;
+  border: 2px solid #0fa942;
+  border-radius: 5px;
+
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left:25%;
+
+
+}
+.button :active{
+
+  background: #0fa942;
+
+
+}
+
+.select {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.back:hover{
+  background-color: dodgerblue;
+}
+.receiver{
+  padding: .02rem
+}
+
+.amount{
+ margin-right:  10px;
+ margin-left: 10px;
+}

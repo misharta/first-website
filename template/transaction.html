@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TRANSACTION</title>
+     <link rel="icon" href="{% static 'image/favicon.jpg' %}">
+<link rel="stylesheet" href="{% static 'styles/transaction.css' %}">
+
+
+  </head>
+  <body>
+     {% csrf_token %}
+
+
+    <div class="header">
+      <header class="sparks">
+        THE SPARK FOUNDATION
+  <span style="float:right" > <a class="back"href="\accounts/customers">BACK</a></span>
+      </header>
+
+    </div>
+
+
+
+    <div class="box">
+      <h2>START TRANSACTION</h2>
+      <form  action="transaction" method="POST">
+      {%csrf_token%}
+        <div class="sender1">
+
+
+          <label class="sender" >Select Sender :</label><br>
+
+        <select class"select" name="from_customerid" id="">
+
+      <option  value="">--select Customer--</option>
+
+{% for customer in mycusts %}
+      <option name ={{customer.id}}>{{customer.name}}</option>
+      {% endfor %}
+
+        </select>
+  </div>
+      <br>
+
+
+      <div class="receiver1">
+
+
+        <label class="Receiver" >Select Reciever: </label><br>
+
+      <select name="to_customerid" id="">
+      <option value="">--select Customer--</option>
+      {% for customer in mycusts %}
+      <option name ={{customer.id}}>{{customer.name}}</option>
+      {% endfor %}
+      </select>
+
+      </div>
+      <br>
+      <div class="amount1">
+        <label class="amount" >Enter Amount : </label>
+        <input type="number" name="amount" placeholder="ENTER AMOUNT" >
+      </div>
+
+
+<br>
+<div class="submit">
+
+          <input class="button" type="submit" name="SUBMIT" value="SUBMIT">
+        </form>
+</div>
+
+
+    </div>
+
+<div class="form-group">
+ {% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
+</div>
+
+
+
+  </body>
+</html>
